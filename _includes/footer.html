@@ -5,25 +5,26 @@
             <div class="col-md-8">
                 <ul class="list-inline">
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="{{ '/#home' | prepend: site.baseurl }}">Home</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="{{ '/#about' | prepend: site.baseurl }}">About</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="{{ '/#projects' | prepend: site.baseurl }}">Projects</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="{{ '/mentor' | prepend: site.baseurl }}">Mentor</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="{{ '/gsoc' | prepend: site.baseurl }}">GSoC</a>
                     </li>
                 </ul>
                 <p class="copyright text-muted small">{{ site.copyright }}</p>
-            </div>
-            <div class="col-md-4">
-                {{ site.credits }}
             </div>
         </div>
     </div>

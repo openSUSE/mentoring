@@ -2,16 +2,15 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: Your Awesome Site
-email: your-email@domain.com
-author: Your Name
-description: > # "Write an awesome description for your new site here. 
-  You can edit this line in _config.yml. It will appear in your document 
-  head meta (for Google search results) and in your feed.xml site 
-  description.
-copyright: 'Copyright &copy; 2015 Your Name. All Rights Reserved.'
-credits: 'Credits: Landing Page is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com/">Start Bootstrap</a>.'
+baseurl: /mentoring
+title: openSUSE Mentoring
+subTitle: get started with Open Source! Now!
+email: cbruckmayer@suse.com
+author: Christian Bruckmayer
+description: The openSUSE Mentoring project is the approach to collect ideas for programs like Google Summer of Code, Rails Girls Summer of Code or Outreachy
+copyright: 'Copyright &copy; 2015 openSUSE. All Rights Reserved.'
+github_organization: openSUSE
+github_repository: mentoring
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -32,3 +31,5 @@ social:
     url: https://github.com/IronSummitMedia/startbootstrap
   - title: linkedin
     url: 
+
+ #gems: [markdownjs-rails]

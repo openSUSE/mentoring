@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+{% include navigation.html %}
+<!-- About Section -->
+<section id="about-gsoc" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <br/><br/>
+            <h2>Flip bits, not burgers!</h2>
+            <br/>
+            <p>
+                Google Summer of Code is a global program that offers students stipends to write code for open source projects.
+                openSUSE takes part in Google Summer of Code since 2006 and helped more than 50 students to start with open source!
+            </p>
+            <br/>
+        </div>
+    </div>
+</section>
+
+<section id="gsoc">
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Why should I join?</h2>
+                    <div class="lead">
+                        <ul>
+                            <li>Because it's fun! And our openSUSE mantra is always have a lot of fun!</li>
+                            <li>You will join an international community of awesome developers!</li>
+                            <li>You will learn <strong>a lot</strong>!</li>
+                            <li>An opportunity to do work related to your academic pursuits!</li>
+                            <li>See how real world software development works!</li>
+                            <li>You'll get a t-shirt!</li>
+                        </ul>
+                        <p>
+                            For more information about the program and who is eligible please visit the official <a href="https://developers.google.com/open-source/gsoc/">Google Summer of Code</a> website!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="{{ '/img/uncle_sam.jpg' | prepend: site.baseurl }}" alt="">
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+    </div>
+
+    <!-- /.content-section-b -->
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Where should I start?</h2>
+                    <div class="lead">
+                        <p class="GSoC-placeholder project-placeholder">Please wait for loading the projects ...</p>
+                        <table style="display: none" data-url="https://api.github.com/repos/{{ site.github_organization }}/{{ site.github_repository }}/issues?labels=gsoc" class="table GSoC-table">
+                            <caption>Just pick one of our projects and follow the get started instructions:</caption>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    <p>
+                        Nothing suitable found? You have your own idea?
+                        Awesome, just get in touch with <a href="">our team</a>!
+                        Creativity and initiative are values we highly appreciate.
+                    </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+    </div>
+    <!-- /.content-section-b -->
+</section>
+{% include footer.html %}
+{% include js.html %}
+<script src="{{ '/js/github.js' | prepend: site.baseurl }}"></script>
+</body>
+</html>

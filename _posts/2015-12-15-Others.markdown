@@ -1,0 +1,10 @@
+---
+layout: default
+img: opensuse.svg
+title: Others
+technologies: [FOSS, Programming]
+website: http://opensuse.org
+github: https://github.com/openSUSE
+description: |
+---
+In this section we list all projects which do not fit in one of the other areas.

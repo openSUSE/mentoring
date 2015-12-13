@@ -1,0 +1,10 @@
+---
+layout: default
+img: obs.png
+title: Open Build Service
+technologies: [Ruby, Ruby on Rails, Perl, Linux, Packaging]
+website: https://openbuildservice.org
+github: https://github.com/openSUSE/open-build-service
+description: |
+---
+A generic system to build and distribute packages from sources in an automatic, consistent and reproducible way. Comprehensive, Collaborative and Open Source!
