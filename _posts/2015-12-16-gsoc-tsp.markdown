@@ -1,0 +1,12 @@
+---
+layout: default
+modal_id: 2
+img: community.png
+title: Travel Support Program
+type: gsoc
+mentor: Ancor González Sosa
+mentee: Karthik Senthil
+website: https://www.google-melange.com/gsoc/project/details/google/gsoc2014/karthiksenthil/5639274879778816
+description: |
+---
+The Travel Support Program(TSP) is a web application, based on Ruby on Rails that has been developed to manage the requests and reimbursements for various conferences such as openSUSE Conference or the KDE e.V. Travel Cost Reimbursement. It is currently being used to manage the openSUSE Travel Support Program, however there is a need for generalization of the design so that other organizations can also start using the application to suit their needs. This is the prime goal of the project.

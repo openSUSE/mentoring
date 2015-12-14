@@ -1,0 +1,31 @@
+ <!-- Event Modals -->
+ {% for post in site.posts %}
+    {% if post.type == 'gsoc' %}
+        <div class="portfolio-modal modal fade" id="gsocModal{{ post.modal_id }}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>{{ post.title }}</h2>
+                                <hr class="star-primary">
+                                <h3>Mentor: {{ post.mentor }}</h3>
+                                <h3>Mentee: {{ post.mentee }}</h3>
+                                <img alt="" class="img-responsive" src="{{ '/img/gsoc/' | prepend: site.baseurl }}{{ post.img }}">
+                                <p>{{ post.content }}</p>
+                                <a href="{{ post.website }}" type="button" class="btn btn-primary" ><i class="fa fa-search"></i> More Information</a>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
