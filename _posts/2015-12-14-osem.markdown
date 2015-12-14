@@ -7,4 +7,4 @@ website: http://osem.io/
 github: https://github.com/openSUSE/osem
 description: |
 ---
-The Open Source Event Manager is an event management app tailored to free software conferences.
+The Open Source Event Manager is an event management app tailored for free software conferences.

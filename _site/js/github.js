@@ -1,8 +1,6 @@
 $(document).ready(function () {
   var url = $('table').first().data('url');
   $.getJSON(url, function (data) {
-    console.log(url);
-    console.log(data);
     $.each(data, function (index) {
 
       // Add the rows to the tables

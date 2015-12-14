@@ -7,4 +7,4 @@ website: http://opensuse.org
 github: https://github.com/openSUSE
 description: |
 ---
-In this section we list all projects which do not fit in one of the other areas.
+In this section, we list all projects that do not fit in one of the other areas.
