@@ -1,0 +1,35 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+baseurl: /mentoring
+title: openSUSE Mentoring
+subTitle: get started with Open Source! Now!
+email: cbruckmayer@suse.com
+author: Christian Bruckmayer
+description: The openSUSE Mentoring project collects ideas for programs like Google Summer of Code, Rails Girls Summer of Code or Outreachy
+copyright: 'Copyright &copy; 2015 openSUSE. All Rights Reserved.'
+github_organization: openSUSE
+github_repository: mentoring
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: twitter
+    url: https://twitter.com/SBootstrap
+  - title: github
+    url: https://github.com/IronSummitMedia/startbootstrap
+  - title: linkedin
+    url: 
+
+ #gems: [markdownjs-rails]
