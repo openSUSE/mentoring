@@ -15,7 +15,7 @@ This site is built with [Jekyll](https://github.com/jekyll/jekyll) and [Bootstra
 ## Contact
 If you have questions feel free to contact our team, subscribe to the opensuse-web@opensuse.org mailinglist or join the #opensuse-project channel on freenode IRC.
 
-- @hennevogel
-- @cornelius
-- @ddemaio
-- @ChrisBr
+- [@hennevogel](https://github.com/hennevogel)
+- [@cornelius](https://github.com/cornelius)
+- [@ddemaio](https://github.com/ddemaio)
+- [@ChrisBr](https://github.com/chrisbr)
