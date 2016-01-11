@@ -3,8 +3,8 @@
 # ----------------------- #
 
 baseurl: /mentoring
-title: openSUSE Mentoring
-subTitle: get started with Open Source! Now!
+title: openSUSE 101
+subTitle: Get started with Free Software now!
 email: cbruckmayer@suse.com
 author: Christian Bruckmayer
 description: The openSUSE Mentoring project collects ideas for programs like Google Summer of Code, Rails Girls Summer of Code or Outreachy
