@@ -3,10 +3,15 @@ $(document).ready(function () {
   $.getJSON(url, function (data) {
     $.each(data, function (index) {
 
+      var user = this.user.html_url;
+      if(this.assignee){
+        var user = this.assignee.html_url;
+      }
+
       // Add the rows to the tables
       var row = "<tr><td><a href='#eventModal" + index + "' data-toggle='modal'>" + this.title + "</a></td>" +
           "<td><a href='" + this.html_url + "'" + this.label + "' type='button' class='btn btn-success btn-xs'>Yes, let's do it</a></td>" +
-          "<td><a href='" + this.user.html_url + "' type='button' class='btn btn-primary btn-xs'>Contact mentor</a></td>" +
+          "<td><a href='" + user + "' type='button' class='btn btn-primary btn-xs'>Contact mentor</a></td>" +
           "</td></tr>";
 
       $.each(this.labels, function () {
