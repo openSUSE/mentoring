@@ -1,6 +1,6 @@
 ---
 layout: default
-img: opensuse.svg
+img: openSUSE.png
 title: Others
 type: project
 technologies: [FOSS, Programming]

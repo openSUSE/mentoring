@@ -1,6 +1,6 @@
 ---
 layout: default
-img: osem.jpg
+img: osem.png
 title: OSEM
 type: project
 technologies: [Ruby, Ruby on Rails]
