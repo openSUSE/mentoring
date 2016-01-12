@@ -1,18 +1,37 @@
 ---
 layout: default
+title: openSUSE 101
 ---
 
 {% include header.html %}
 
-{% include about.html %}
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2 class="text-center">Get started with Free Software now!</h2>
+        <p class="lead">
+          {% include teaser.md %}
+        </p>
+        <p class="lead">
+          You have come to the right place! Scroll down and we will connect
+          you with <em>real</em> people from our community who are willing
+          to mentor you doing some <em>real</em> development projects.
+          Get started with Free Software, now!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section id="projects">
+<div id="projects"></div>
+
 <!-- Page Content -->
 {% for post in site.posts reversed %}
   {% if post.type == 'project' %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
         {% if thecycle == 'odd' %}
-        <div class="content-section-a">
+        <section>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-sm-6">
@@ -52,10 +71,9 @@ layout: default
                 </div>
             </div>
             <!-- /.container -->
-        </div>
-        <!-- /.content-section-a -->
+        </section>
         {% else %}
-        <div class="content-section-b">
+        <section>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
@@ -94,11 +112,9 @@ layout: default
                 </div>
             <!-- /.container -->
         </div>
-        </div>
-        <!-- /.content-section-b -->
+      </section>
         {% endif %}
     {% endif %}
 {% endfor %}
-</section>
 
 {% include mentor.html %}

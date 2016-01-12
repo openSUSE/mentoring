@@ -35,6 +35,12 @@ h6 {
     background-size: cover;
 }
 
+.intro-header-gsoc {
+  background: url(../img/gsoc/intro-bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #73ba25;
+}
+
 .intro-message {
     position: relative;
     padding-top: 20%;
@@ -88,19 +94,16 @@ h6 {
     letter-spacing: 2px;
 }
 
-.content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
-}
-
-.content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
-}
-
 section {
   padding: 20px 0 20px;
+}
+section:nth-of-type(odd) {
+  background: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+section:first-of-type {
+  padding: 20px 0 0;
 }
 
 .section-heading {
@@ -162,7 +165,7 @@ section {
 
 footer {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: #222;
 }
 
 p.copyright {
