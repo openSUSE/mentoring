@@ -1,6 +1,6 @@
 ---
 layout: default
-img: portus.jpg
+img: portus.png
 title: Portus
 type: project
 technologies: [Ruby, Ruby on Rails, Docker]
