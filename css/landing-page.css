@@ -41,6 +41,12 @@ h6 {
   color: #73ba25;
 }
 
+.intro-header-mentor {
+  background: url(../img/mentor-intro-bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #73ba25;
+}
+
 .intro-message {
     position: relative;
     padding-top: 20%;
