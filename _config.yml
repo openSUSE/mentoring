@@ -2,7 +2,6 @@
 #      Main Configs       #
 # ----------------------- #
 
-baseurl: /mentoring
 title: openSUSE 101
 subTitle: Get started with Free Software now!
 email: cbruckmayer@suse.com

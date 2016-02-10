@@ -7,13 +7,13 @@
     <meta name="author" content="{{ site.author }}">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
     <!-- Bootstrap Core CSS -->
     <link href="//oss.maxcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ '/css/landing-page.css' | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="/css/landing-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="//oss.maxcdn.com/fontawesome/4.1.0/css/font-awesome.min.css " rel="stylesheet" type="text/css">
@@ -25,6 +25,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="{{ '/img/favicon.png' | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="/img/favicon.png">
 
 </head>
