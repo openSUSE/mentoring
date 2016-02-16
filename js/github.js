@@ -38,7 +38,10 @@ $(document).ready(function () {
               "<h3>" + this.title + "</h3>" +
               "<p>" + markdown.toHTML(this.body) + "</p>" +
               gsoc_hint +
-              "<div class='text-center'><button type='button' class='btn btn-default' data-dismiss='modal'><i class='fa fa-times'></i>Close</button>" +
+              "<div class='text-center btn-toolbar'>" +
+              "<a href='" +
+              this.html_url +
+              "' type='button' class='btn btn-success btn-lg'><i class='fa fa-check fa-fw'></i>Yes, let's do it</a>" +
               "</div></div></div></div></div></div></div>";
           $('footer').after(modal);
           $('.project-placeholder').html("Sorry but currently we don't have any mentoring project ...")
