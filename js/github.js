@@ -10,10 +10,15 @@ $(document).ready(function () {
     if(remaining > 0) {
       $.getJSON(url, function (data) {
         $.each(data, function (index) {
+
+          // Assignee can be nil
+          var mentor = this.assignee ? this.assignee.login : this.user.login;
+          var mentor_url = this.assignee ? this.assignee.html_url : this.user.html_url;
+
           // Add the rows to the tables
-          var row = "<tr><td><a href='#eventModal" + index + "' data-toggle='modal'>" + this.title + "</a></td>" +
-              "<td><a href='" + this.html_url + "'" + this.label + "' type='button' class='btn btn-success btn-xs'>Yes, let's do it</a></td>" +
-              "</td></tr>";
+          var row = "<tr><td><a href='#eventModal" + index + "' data-toggle='modal'>" + this.title + "</a>" +
+              " together with <a href='" + mentor_url + "'><i class='fa fa-fw fa-github'></i>" + mentor + "</a></td>" +
+              "<td><a href='" + this.html_url + "' type='button' class='btn btn-success btn-xs'>Yes, let's do it</a></td></tr>";
 
           $.each(this.labels, function () {
             $('.' + this.name + '-table tbody').append(row);
@@ -71,4 +76,3 @@ function get_gsoc_hint(labels){
   }
   return result;
 }
-
