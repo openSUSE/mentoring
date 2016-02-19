@@ -1,7 +1,7 @@
 <section id="mentor">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-lg-8 col-lg-offset-2" id="mentor-guidelines">
         <h2 class="text-center">Become a Mentor!</h2>
         <p class="lead">
           The world needs more free software hackers/code.
@@ -13,12 +13,14 @@
           Being a mentor requires your time, a clear vision of your
           project and good organization skills. We carefully compiled some tips,
           tricks and guidelines for mentoring into our
-          <a role="button" data-toggle="collapse" href="#mentor-guidelines" aria-expanded="false" aria-controls="collapseExample">
+          <a role="button" data-toggle="collapse"
+             data-target="#mentor-guidelines-collapse"
+             aria-expanded="false" aria-controls="mentor-guidelines-collapse">
             mentor guidelines
           </a>.
           Please read this for more information about being a mentor.
         </p>
-        <div class="collapse" id="mentor-guidelines">
+        <div class="collapse" id="mentor-guidelines-collapse">
           {% include mentor-guidelines.html %}
         </div>
       </div>

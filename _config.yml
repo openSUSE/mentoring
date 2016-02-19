@@ -10,7 +10,8 @@ description: The openSUSE Mentoring project collects ideas for programs like Goo
 copyright: 'Copyright &copy; 2015 openSUSE. All Rights Reserved.'
 github_organization: openSUSE
 github_repository: mentoring
-
+gems:
+  - jekyll-redirect-from
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
