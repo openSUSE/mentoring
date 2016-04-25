@@ -20,6 +20,5 @@ gems:
 markdown: kramdown
 permalink: pretty
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
+collections:
+- gsoc_current
