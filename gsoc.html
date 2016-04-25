@@ -3,8 +3,20 @@ layout: default
 title: openSUSE @ GSoC
 slug: gsoc
 ---
-
-{% include header.html %}
+<section id="home">
+  <div class="intro-header {% if page.slug != null %} intro-header-{{page.slug}} {% endif %}">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="intro-message">
+            <h1>{{page.title}}</h1>
+            <hr class="intro-divider">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="about">
   <div class="container">
