@@ -2,45 +2,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">Google Summer of Code 2016 Projects</h2>
-        <div id="portfolio" class="lead">
-          <div class="row">
-            {% for project in site.gsoc_current limit:3 %}
-              <div class="col-md-4 col-sm-6">
-                  <img alt="" class="img-responsive" src="/img/projects/{{ project.img }}">
-                  <div class="portfolio-caption">
-                    <h4>{{ project.title }}</h4>
-                    <p>
-                      Mentor: {{ project.mentor }}
-                      <br />
-                      Mentee: {{ project.mentee }}
-                    </p>
-                    <p>
-                      {{ project.content }}
-                    </p>
-                  </div>
-                </div>
-            {% endfor %}
-          </div>
-          <div class="row">
-            {% for project in site.gsoc_current offset:3 %}
-              <div class="col-md-4 col-sm-6">
-                  <img alt="" class="img-responsive" src="/img/projects/{{ project.img }}">
-                  <div class="portfolio-caption">
-                    <h4>{{ project.title }}</h4>
-                    <p>
-                      Mentor: {{ project.mentor }}
-                      <br />
-                      Mentee: {{ project.mentee }}
-                    </p>
-                    <p>
-                      {{ project.content }}
-                    </p>
-                  </div>
-                </div>
-            {% endfor %}
-          </div>
+        <h2>Google Summer of Code 2016 Projects</h2>
+        <div class="row">
+          {% for project in site.gsoc_current limit:3 %}
+            {% include project.html %}
+          {% endfor %}
+        </div>
+        <div class="row">
+          {% for project in site.gsoc_current offset:3 %}
+            {% include project.html %}
+          {% endfor %}
         </div>
       </div>
     </div>
