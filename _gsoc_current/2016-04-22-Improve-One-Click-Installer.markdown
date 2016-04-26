@@ -1,7 +1,13 @@
 ---
 img: openSUSE.png
-mentor: Antonio Larrosa, Cornelius Schumacher
-mentee: Shalom Rachapudi David
+mentors:
+        - name: Antonio Larrosa
+        - name: Cornelius Schumacher
+          github: cornelius
+mentees:
+        - name: Shalom Rachapudi David
 website: https://news.opensuse.org/category/project/gsoc-project/
 ---
-A version of the one-click installer with much improved user interface which is easier to use, gives more information and looks nicer than the current version.
+This project aims to create a version of the QT based [one-click installer](https://github.com/openSUSE/one-click-installer)
+with much improved user interface which is easier to use, gives more information
+and looks nicer than the current version.

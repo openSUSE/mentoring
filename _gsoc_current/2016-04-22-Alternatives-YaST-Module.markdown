@@ -1,10 +1,15 @@
 ---
 img: yast.png
-mentor: Ancor Gonzalez Sosa, Josef Reidinger
-mentee: Joaquín Yeray Martín de la Nuez
+mentors:
+        - name: Ancor Gonzalez Sosa
+          github: ancorgs
+        - name: Josef Reidinger
+          github: jreidinger
+mentees:
+        - name: Joaquín Yeray Martín de la Nuez
+          github: jyeray
 website: https://news.opensuse.org/category/project/gsoc-project/
 ---
-Others distributions of GNU/Linux have a GUI to handle update-­alternatives, but
-openSUSE does not have it. The solution will be a YaST module to manage update-­alternatives
-with an easy and simple GUI that makes easier the configuration of alternatives and
-will enhance the user experience.
+Build a [YaST](http://yast.github.io/) module to manage update-alternatives with an
+easy and simple graphical user interface that makes easier the configuration of
+alternatives and enhance the user experience.
