@@ -73,6 +73,9 @@ redirect_from:
                         <div class="text-center">
                             <a href="{{ post.website }}"><i class="fa fa-rss-square fa-2x icon-mentoring"></i></a>
                             <a href="{{ post.github }}"><i class="fa fa-github fa-2x icon-mentoring"></i></a>
+                            {% if post.twitter %}
+                            <a href="https://twitter.com/{{ post.twitter }}"><i class="fa fa-twitter fa-2x icon-mentoring"></i></a>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -113,6 +116,9 @@ redirect_from:
                         <div class="text-center">
                             <a href="{{ post.website }}"><i class="fa fa-rss-square fa-2x icon-mentoring"></i></a>
                             <a href="{{ post.github }}"><i class="fa fa-github fa-2x icon-mentoring"></i></a>
+                            {% if post.twitter %}
+                            <a href="https://twitter.com/{{ post.twitter }}"><i class="fa fa-twitter fa-2x icon-mentoring"></i></a>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-5 col-sm-pull-6  col-sm-6">
