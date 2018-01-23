@@ -6,6 +6,7 @@ type: project
 technologies: [Ruby on Rails, Ruby, HTML, Java Script, packaging]
 website: http://openbuildservice.org
 github: https://github.com/openSUSE/open-build-service
+twitter: obshq
 description: |
 ---
 

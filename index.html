@@ -21,6 +21,12 @@ redirect_from:
           to mentor you doing some <em>real</em> development projects.
           Get started with Free Software, now!
         </p>
+        <p class="lead">
+          And if you have questions, we are here to help you! Tweet us at
+          <a href="https://twitter.com/@opensusementors" target="_blank">@opensusementors</a>
+          or write to our
+          <a href="mailto: opensuse-project@opensuse.org">mailing list</a>.
+        </p>
         <p class="small">
           {% include more-mentee.html %}
         </p>
@@ -67,6 +73,9 @@ redirect_from:
                         <div class="text-center">
                             <a href="{{ post.website }}"><i class="fa fa-rss-square fa-2x icon-mentoring"></i></a>
                             <a href="{{ post.github }}"><i class="fa fa-github fa-2x icon-mentoring"></i></a>
+                            {% if post.twitter %}
+                            <a href="https://twitter.com/{{ post.twitter }}"><i class="fa fa-twitter fa-2x icon-mentoring"></i></a>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -107,6 +116,9 @@ redirect_from:
                         <div class="text-center">
                             <a href="{{ post.website }}"><i class="fa fa-rss-square fa-2x icon-mentoring"></i></a>
                             <a href="{{ post.github }}"><i class="fa fa-github fa-2x icon-mentoring"></i></a>
+                            {% if post.twitter %}
+                            <a href="https://twitter.com/{{ post.twitter }}"><i class="fa fa-twitter fa-2x icon-mentoring"></i></a>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="col-lg-5 col-sm-pull-6  col-sm-6">

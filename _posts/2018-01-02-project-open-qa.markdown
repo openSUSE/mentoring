@@ -6,6 +6,7 @@ type: project
 technologies: [Perl]
 website: http://open.qa/
 github: https://github.com/os-autoinst/openQA
+twitter: openQAhq
 description: |
 ---
 
