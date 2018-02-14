@@ -6,6 +6,5 @@ type: project
 technologies: [Ruby, Ruby on Rails, Docker]
 website: https://suse.github.io/Portus/
 github: https://github.com/SUSE/Portus
-description: |
 ---
 Portus is an open source authorization service and user interface for the next generation Docker Registry.
