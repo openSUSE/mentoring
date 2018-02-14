@@ -7,6 +7,6 @@ technologies: [Ruby]
 website: https://github.com/openSUSE/trollolo/blob/master/man/trollolo.1.md
 github: https://github.com/openSUSE/trollolo
 ---
-With Trollolo teams using SCRUM and Trello can generate their burndown charts.
+Trollolo helps teams using Trello to organize their work, for example making really easy to generate their burndown charts.
 
 
