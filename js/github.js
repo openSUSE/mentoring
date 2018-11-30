@@ -68,7 +68,7 @@ function get_gsoc_hint(labels){
         url = current_url;
       }
       else{
-        url = current_url + "/gsoc";
+        url = current_url + "/gsoc/";
       }
       result = "<p>You can do this project as part of the Google Summer of Code program. Click <a href='" + url + "'>here</a> for more information.</p>"
       break;
