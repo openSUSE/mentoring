@@ -2,7 +2,7 @@
 layout: default
 img: jangouts.png
 title: Jangouts
-type: project
+type: archive
 technologies: [Java Script, AngularJS]
 website: https://github.com/jangouts/jangouts
 github: https://github.com/jangouts/jangouts

@@ -2,7 +2,7 @@
 layout: default
 img: yast.png
 title: YaST
-type: project
+type: archive
 technologies: [Ruby, Linux]
 website: http://yast.github.io/
 github: https://github.com/yast
