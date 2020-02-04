@@ -2,7 +2,7 @@
 layout: default
 img: osem.png
 title: OSEM
-type: project
+type: archive
 technologies: [Ruby, Ruby on Rails]
 website: http://osem.io/
 github: https://github.com/openSUSE/osem

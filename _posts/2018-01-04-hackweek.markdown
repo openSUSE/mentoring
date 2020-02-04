@@ -2,7 +2,7 @@
 layout: default
 img: hackweek.png
 title: Hackweek
-type: project
+type: archive
 technologies: [Ruby, Ruby on Rails, HTML, Java Script]
 website: https://hackweek.suse.com/
 github: https://github.com/SUSE/hackweek

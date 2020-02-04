@@ -2,7 +2,7 @@
 layout: default
 img: eos.png
 title: EOS
-type: project
+type: archive
 technologies: [Node.js, CI, Gulp, Express.js, SASS, Java Script, UX/UI]
 website: https://eosdesignsystem.com
 github: https://gitlab.com/SUSE-UIUX/eos/

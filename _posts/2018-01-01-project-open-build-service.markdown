@@ -2,7 +2,7 @@
 layout: default
 img: open-build-service.png
 title: OpenBuildService
-type: project
+type: archive
 technologies: [Ruby on Rails, Ruby, HTML, Java Script, packaging]
 website: http://openbuildservice.org
 github: https://github.com/openSUSE/open-build-service

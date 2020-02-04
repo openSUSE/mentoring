@@ -2,7 +2,7 @@
 layout: default
 img: portus.png
 title: Portus
-type: project
+type: archive
 technologies: [Ruby, Ruby on Rails, Docker]
 website: https://suse.github.io/Portus/
 github: https://github.com/SUSE/Portus
