@@ -2,49 +2,21 @@
 layout: default
 title: openSUSE @ GSoC
 slug: gsoc
+frontmatter:
+  cover: /assets/img/gsoc/GSoC.png
 ---
-<section id="home">
-  <div class="intro-header {% if page.slug != null %} intro-header-{{page.slug}} {% endif %}">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="intro-message">
-            <h1>{{page.title}}</h1>
-            <hr class="intro-divider">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include frontmatter.html %}
 
-<section id="about">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="text-center">Flip bits, not burgers!</h2>
-            <p class="lead">
-              Google Summer of Code is a global program that offers students a
-              stipend to write code for free software projects. <strong>openSUSE</strong>
-              has participated in Google Summer of Code since 2006 and has
-              helped more than 50 students to get started with free software!
-            </p>
-            <p class="lead">
-              This year openSUSE once again applied to be a mentoring organisation.
-            </p>
-        </div>
-    </div>
-  </div>
-</section>
+{% include markdown-section.html markdown='gsoc/intro.md' size='col-md-8 mx-auto' %}
 
+{% include markdown-section.html markdown='gsoc/howto.md' %}
 
-{% include gsoc-howto.html %}
+{% include gsoc/available-projects.html %}
 
-{% include gsoc-projects.html %}
+{% include gsoc/accepted-projects.html %}
 
-{% include gsoc-accepted-projects.html %}
+{% include markdown-section.html markdown='mentor.md' %}
 
-{% include mentor.html %}
+{% include markdown-section.html markdown='gsoc/mentor_process.md' img='/assets/img/starbucks.jpg' class='bg-light' %}
 
-{% include gsoc-mentor_process.html %}
-
+{% include js.html %}

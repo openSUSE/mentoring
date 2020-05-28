@@ -1,0 +1,15 @@
+{% if include.id %}<div class="prenav" id="{{ include.id }}"></div>{% endif %}
+<section class="border-bottom py-4 {{ include.class }}">
+  <div class="container">
+    <div class="row {{ include.size }}">
+      <div class="col">
+        {% capture markdown-file %}{% include {{ include.markdown }} %}{% endcapture %}
+        {{ markdown-file | markdownify }}
+      </div>
+      {% if include.img %}
+      <div class="col-lg-7 col-sm-6">
+        <img class="img-responsive" src="{{ include.img }}" alt="">
+      </div>
+      {% endif %}
+    </div>
+</section>

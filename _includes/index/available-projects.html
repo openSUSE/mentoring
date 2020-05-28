@@ -1,0 +1,41 @@
+<div class="prenav" id="projects"></div>
+
+{% for post in site.projects %}
+  {% if post.type == 'project' %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        <section class="py-4{% if thecycle == 'odd' %} bg-light{% endif %} border-bottom">
+            <div class="container">
+                <div class="row {% if thecycle == 'odd' %}flex-row-reverse{% endif %}">
+                    <div class="col-lg-7 col-sm-6">
+                        <h2>
+                        <span class="section-heading">{{ post.title }}</span>
+                        <span>
+                            <a href="{{ post.website }}">{% include icons/rss.svg %}</a>
+                            <a href="{{ post.github }}">{% include icons/github.svg %}</a>
+                            {% if post.twitter %}
+                            <a href="https://twitter.com/{{ post.twitter }}">{% include icons/twitter.svg %}</a>
+                            {% endif %}
+                        </span>
+                        </h2>
+                        <h4>
+                            {% for technology in post.technologies %}
+                            <span class="badge badge-info">{{ technology }}</span>
+                            {% endfor %}
+                        </h4>
+                        <div class="lead">{{ post.content }}
+                        </div>
+                        <p class="{{ post.title }}-placeholder project-placeholder">Please wait for loading the projects ...</p>
+                        <div id="github-list" style="display: none" data-url="https://api.github.com/repos/{{ site.github_organization }}/{{ site.github_repository }}/issues" class="{{ post.title }}-table">
+                            <caption>Pick one of the projects and follow the get started instructions:</caption>
+                            <div class="list-group"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-sm-6">
+                        <img class="img-responsive border" src="assets/img/projects/{{ post.img }}" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- /.container -->
+        </section>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,16 @@
+<section class="border-bottom py-4 bg-light">
+	<div class="container">
+		<div class="row">
+			{% assign sorted = (site.gsoc | sort: 'date') | reverse %}
+			{% for project in sorted %}
+				{% assign next = project.next.date | date: "%Y" %}
+				{% assign curr = project.date | date: "%Y" %}
+				{% if next == False or curr != next %}
+				<div id="projects-{{ curr }}" class="prenav"></div>
+				<h2 class="col-12">Google Summer of Code {{ curr }} Projects</h2>
+				{% endif %}
+				{% include gsoc/project.html %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,13 +1,14 @@
 <div>
   <p>
   Still not convinced this is right for you? Check out a
-  <a role="button" data-toggle="collapse"
+  <a role="button" data-toggle="collapse" href="#"
      data-target="#mentee-guidelines-collapse"
      aria-expanded="false" aria-controls="mentee-guidelines-collapse">
      more detailed description
   </a>.
   </p>
   <div class="collapse" id="mentee-guidelines-collapse">
-    {% include mentee-guidelines.html %}
+    {% capture mentee-guidelines %}{% include mentee-guidelines.md %}{% endcapture %}
+    {{ mentee-guidelines | markdownify }}
   </div>
 </div>
