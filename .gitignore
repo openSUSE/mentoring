@@ -1,2 +1,7 @@
 .idea
-_site
+.bundle/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+_site/
+vendor/
