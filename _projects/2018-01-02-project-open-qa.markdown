@@ -1,5 +1,4 @@
 ---
-layout: default
 img: openqa.png
 title: openQA
 type: project

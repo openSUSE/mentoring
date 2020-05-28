@@ -1,5 +1,4 @@
 ---
-layout: default
 img: eos.png
 title: EOS
 type: archive

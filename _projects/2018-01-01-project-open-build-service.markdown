@@ -1,5 +1,4 @@
 ---
-layout: default
 img: open-build-service.png
 title: OpenBuildService
 type: archive

@@ -1,0 +1,10 @@
+---
+img: hackweek.png
+title: Hackweek
+type: archive
+technologies: [Ruby, Ruby on Rails, HTML, Java Script]
+website: https://hackweek.suse.com/
+github: https://github.com/SUSE/hackweek
+---
+
+A tool to nurture hack ideas into projects and then collaborate on them. It's used during SUSEs hackweek, a week where SUSE engineers meet with other openSUSE contributors to experiment, innovate & learn interruption-free.

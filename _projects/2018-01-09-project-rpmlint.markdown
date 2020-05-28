@@ -1,5 +1,4 @@
 ---
-layout: default
 img: rpmlint.png
 title: rpmlint
 type: project

@@ -1,5 +1,4 @@
 ---
-layout: default
 img: portus.png
 title: Portus
 type: archive

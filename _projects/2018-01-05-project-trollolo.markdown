@@ -1,5 +1,4 @@
 ---
-layout: default
 img: trollolo.png
 title: Trollolo
 type: archive

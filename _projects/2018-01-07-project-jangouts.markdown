@@ -1,5 +1,4 @@
 ---
-layout: default
 img: jangouts.png
 title: Jangouts
 type: archive

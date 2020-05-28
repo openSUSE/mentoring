@@ -1,5 +1,4 @@
 ---
-layout: default
 img: openSUSE.png
 title: Others
 type: project

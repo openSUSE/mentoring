@@ -1,5 +1,4 @@
 ---
-layout: default
 img: uyuni.png
 title: Uyuni
 type: project

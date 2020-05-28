@@ -1,5 +1,4 @@
 ---
-layout: default
 img: osem.png
 title: OSEM
 type: archive

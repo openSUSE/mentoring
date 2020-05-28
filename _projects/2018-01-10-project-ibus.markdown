@@ -1,5 +1,4 @@
 ---
-layout: default
 img: ibus.png
 title: ibus
 type: project

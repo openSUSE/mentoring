@@ -1,5 +1,4 @@
 ---
-layout: default
 img: yast.png
 title: YaST
 type: archive
