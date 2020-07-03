@@ -1,0 +1,19 @@
+<div id="projects-{{ site.time | date: '%Y' }}" class="prenav"></div>
+<section id="gsoc-projects" class="border-bottom py-4">
+	<div class="container">
+		<h2 class="section-heading">What can I do?</h2>
+		<p class="lead">Just pick one of our projects and follow the get started instructions:</p>
+		<div class="lead">
+			<p class="GSoC-placeholder project-placeholder">Please wait for loading the projects ...</p>
+			<div style="display: none" data-url="https://api.github.com/repos/{{ site.github_organization }}/{{ site.github_repository }}/issues?labels=gsoc&state=open" class="GSoC-table">
+			<div class="list-group"></div>
+			</div>
+			<p class="lead">You can find a description of the different openSUSE projects on our <a href="/#projects">101 projects page</a>.</p>
+			<p class="small">
+				Nothing you like? Do you have your own idea?
+				Awesome, just get in touch with <a href="mailto:opensuse-project@opensuse.org">our team</a>!
+				Creativity and initiative are qualities we highly appreciate.
+			</p>
+		</div>
+	</div>
+</section>

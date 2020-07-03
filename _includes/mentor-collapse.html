@@ -1,0 +1,17 @@
+<div>
+  <p>
+    Being a mentor requires your time, a clear vision of your
+    project and good organization skills. We carefully compiled some tips,
+    tricks and guidelines for mentoring into our
+    <a role="button" data-toggle="collapse" href="#"
+       data-target="#mentor-guidelines-collapse"
+       aria-expanded="false" aria-controls="mentor-guidelines-collapse">
+      mentor guidelines
+    </a>.
+    Please read this for more information about being a mentor.
+  </p>
+  <div class="collapse" id="mentor-guidelines-collapse">
+    {% capture mentor-guidelines %}{% include mentor-guidelines.md %}{% endcapture %}
+    {{ mentor-guidelines | markdownify }}
+  </div>
+</div>

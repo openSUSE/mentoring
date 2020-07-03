@@ -1,0 +1,16 @@
+<section id="home" class="frontmatter d-flex text-light text-center border-bottom">
+	<img src="{{page.frontmatter.cover}}" class="frontmatter-background"/>
+	<div class="frontmatter-content m-auto">
+		<h1 class="display-2 m-0">{%if page.title%}{{page.title}}{%else%}{{site.title}}{%endif%}</h1>
+		<hr class="frontmatter-divider">
+		{% if page.frontmatter.links != nil %}
+		<ul class="list-inline">
+			{% for link in page.frontmatter.links %}
+			<li class="list-inline-item">
+				<a href="{{link.location}}" class="btn btn-secondary btn-lg btn-frontmatter text-uppercase h5">{% include {{link.include}} %} <span>{{link.name}}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</div>
+</section>

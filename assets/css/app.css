@@ -1,0 +1,44 @@
+img {
+    max-width: 100%;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.frontmatter {
+    position: relative;
+    height: 70vh;
+}
+
+.frontmatter-background {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #000;
+}
+
+.frontmatter-divider {
+    max-width: 25rem;
+    border-top: 1px solid #fff;
+}
+
+.frontmatter-content > h1, .frontmatter-content > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.frontmatter-content .btn-frontmatter {
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+/* Used to have ids navbar height before the sections */
+.prenav {
+  position: absolute;
+  margin-top: -3.625rem;
+}

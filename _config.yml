@@ -3,14 +3,16 @@
 # ----------------------- #
 
 title: openSUSE 101
+title_short: 101
 subTitle: Get started with Free Software now!
 email: cbruckmayer@suse.com
 author: Christian Bruckmayer
 description: The openSUSE Mentoring project collects ideas for programs like Google Summer of Code, Rails Girls Summer of Code or Outreachy
-copyright: 'Copyright &copy; 2015 openSUSE. All Rights Reserved.'
+copyright: 'Copyright &copy; 2015-2020 openSUSE. All Rights Reserved.'
 github_organization: openSUSE
 github_repository: mentoring
-gems:
+github_url: "https://github.com/openSUSE/mentoring"
+plugins:
   - jekyll-redirect-from
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -19,6 +21,24 @@ gems:
 # Build settings
 markdown: kramdown
 permalink: pretty
+theme: jekyll-theme-opensuse
 
 collections:
-- gsoc_current
+- gsoc
+- projects
+
+footer_links:
+- text: Source Code
+  link: https://github.com/openSUSE/mentoring
+
+navbar_links:
+  - link: /#about
+    text: About
+  - link: /#projects
+    text: Projects
+  - link: /#mentor
+    text: Mentor
+  - link: /gsoc/
+    text: GSoC
+
+exclude: [README.md, Gemfile, Gemfile.lock, vendor, ISSUE_TEMPLATE.md, templates]

@@ -1,0 +1,37 @@
+<div class="col-md-4 col-sm-6 mb-4">
+	<div class="card h-100">
+	<img alt="" class="card-img-top border-bottom" src="/assets/img/projects/{{ project.img }}">
+		<div class="card-body border-bottom">
+			<h4>{{ project.title }}</h4>
+			<p>
+				{{ project.content }}
+			</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				{% assign mentors = project.mentors | size %}
+				<b>Mentor{% if mentors > 1 %}s{% endif %}:</b>
+				{%- for mentor in project.mentors -%}
+					{% if mentor.github %}
+						<a href="https://github.com/{{mentor.github}}">{{ mentor.name }}</a>
+					{%- else -%}
+						{{ mentor.name }}
+					{%- endif -%}
+					{%- unless forloop.last -%}, {%- endunless -%}
+				{%- endfor %}
+			</li>
+			<li class="list-group-item">
+				{% assign mentees = project.mentees | size %}
+				<b>Mentee{% if mentees > 1 %}s{% endif %}:</b>
+				{%- for mentee in project.mentees -%}
+					{% if mentee.github %}
+						<a href="https://github.com/{{mentee.github}}">{{ mentee.name }}</a>
+					{%- else -%}
+						{{ mentee.name }}
+					{%- endif -%}
+					{%- unless forloop.last -%}, {%- endunless -%}
+				{%- endfor %}
+			</li>
+		</ul>
+	</div>
+</div>
