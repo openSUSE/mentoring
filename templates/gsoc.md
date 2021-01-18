@@ -1,4 +1,4 @@
-For Google Summer of Code it's necessary to write a project proposal and put it on Google Melange.
+Putting Google Summer of Code project proposals on [Google Melange](https://www.google-melange.com/archive/) has been phased out. The below info is for historical purposes.
 To get started, you can use this template to structure your proposal, but don't worry, you don't have to stick to this template one by one:
 
   **Introduction:** Your software project should solve a clearly defined problem.
