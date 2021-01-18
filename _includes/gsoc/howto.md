@@ -17,11 +17,11 @@ and get in touch with the mentor.
 you want to do this project for GSoC you write up a
 [project proposal](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/).
 
-<span>{% include icons/send.svg %} Between *16th of March and 31st of March 2020*
-you have to submit your project proposal to the
+<span>{% include icons/send.svg %} Between *29 March and 13 April 2021*
+students can submit their project proposals on the
 [GSoC program site](https://summerofcode.withgoogle.com/).
 
-<span>{% include icons/google.svg %} On *27th of April 2020* Google will
+<span>{% include icons/google.svg %} On *17th of May 2021* Google will
 announce accepted student proposals.
 
 <span>{% include icons/computer.svg %} Code the
