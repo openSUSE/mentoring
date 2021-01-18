@@ -9,17 +9,17 @@ assign yourself
 <span>{% include icons/chat.svg %} When students get in touch with you
 in the issue, help them
 
-<span>{% include icons/file.svg %} Between *12th of March and 27th of March 2018*
+<span>{% include icons/file.svg %} Between *29th of March and 13th of April 2021*
 students have to submit a
 [proposal](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
 for your project to the
 [GSoC program site](https://summerofcode.withgoogle.com/). Help them
 
-<span>{% include icons/google.svg %} On *23th of April 2018* Google will
+<span>{% include icons/google.svg %} On *17th of May 2021* Google will
 announce accepted student proposals
 
-<span>{% include icons/computer.svg %} If your one of your students
-proposals makes the cut GSoC starts and runs all
+<span>{% include icons/computer.svg %} If one of your students
+proposals makes the cut, GSoC starts and runs all
 [summer](https://developers.google.com/open-source/gsoc/timeline)!
 
 Google Summer of Code is a very well thought out program with many
