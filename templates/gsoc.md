@@ -1,4 +1,4 @@
-Putting Google Summer of Code project proposals on [Google Melange](https://www.google-melange.com/archive/) has been phased out. The below info is for historical purposes.
+Putting Google Summer of Code project proposals on [Google Melange](https://www.google-melange.com/archive/) has been phased out. The below info is still a useful framework.
 To get started, you can use this template to structure your proposal, but don't worry, you don't have to stick to this template one by one:
 
   **Introduction:** Your software project should solve a clearly defined problem.
