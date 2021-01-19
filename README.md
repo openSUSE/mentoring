@@ -10,7 +10,7 @@ Code](http://railsgirlssummerofcode.org/) or [Outreachy](https://www.gnome.org/o
 This site is built with [Jekyll](https://github.com/jekyll/jekyll) and [Bootstrap](https://github.com/twbs/bootstrap).
 
 ### Adding a new project
-1. Copy a project file from the `_posts` folder (please note that the date in the filename sets the order of projects on the page)
+1. Copy a project file from the `_projects` folder (please note that the date in the filename sets the order of projects on the page)
 2. Fill the fields in the copied file accordingly
 3. Install the ruby bundle `bundle install`
 4. Run `jekyll serve` and check in the browser on `0.0.0.0:4000` if the site looks like expected
