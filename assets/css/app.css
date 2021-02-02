@@ -42,3 +42,12 @@ svg {
   position: absolute;
   margin-top: -3.625rem;
 }
+
+@media (prefers-color-scheme: dark) {
+  .border-bottom, .border {
+    border-color: #495057 !important;
+  }
+  .bg-light {
+    background-color: #272b30 !important;
+  }
+}
