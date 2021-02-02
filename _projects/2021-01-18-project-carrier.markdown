@@ -1,6 +1,6 @@
 ---
 img: carrier.png
-title: Carrier - PaaS [Platform as a service]
+title: Carrier
 type: project
 technologies: [Kubernetes, Golang, Bash]
 github: https://github.com/SUSE/carrier
