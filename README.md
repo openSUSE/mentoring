@@ -16,6 +16,11 @@ This site is built with [Jekyll](https://github.com/jekyll/jekyll) and [Bootstra
 4. Run `jekyll serve` and check in the browser on `0.0.0.0:4000` if the site looks like expected
 5. Send a Pull Request
 6. Add [issues](https://github.com/openSUSE/mentoring/issues) about your project following the issue template
+7. Get an github project admin to add a label to your issues that is called like your project
+
+
+## Deployment
+This page is auto-deployed every hour by the [openSUSE Heroes](https://en.opensuse.org/openSUSE:Heroes)
 
 ## Contact
 If you have questions feel free to contact our team, subscribe to the
