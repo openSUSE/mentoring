@@ -1,5 +1,5 @@
 ---
-img: rancher-logo-only-color.png
+img: rancher.png
 title: Rancher
 type: project
 technologies: [Container, Kubernetes, Helm, Linux]
