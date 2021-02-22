@@ -2,7 +2,7 @@
 img: openSUSE.png
 title: Others
 type: project
-technologies: [FOSS, Programming]
+technologies: [FOSS, Programming, Ruby, Linux]
 website: http://opensuse.org
 github: https://github.com/openSUSE
 ---
