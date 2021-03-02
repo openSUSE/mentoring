@@ -7,5 +7,5 @@ has participated in several Google Summer of Code since 2006 and has
 helped around 100 students to get started with free software!
 {:.lead}
 
-This year openSUSE once again applied to be a mentoring organisation.
+This year openSUSE once again applied to be a mentoring organisation. A list of project ideas can be found on https://101.opensuse.org/#projects
 {:.lead}
