@@ -21,7 +21,7 @@ $(document).ready(function () {
             // Add the rows to the tables
             var row = "<div class='list-group-item d-flex justify-content-between align-items-center'><span><a href='#eventModal" + index + "' data-toggle='modal'>" + this.title + "</a>" +
                 " with <a href='" + mentor_url + "'>" + mentor + "</a></span>" +
-                "<a href='" + this.html_url + "' type='button' class='btn btn-success btn-xs text-nowrap'>Let's do it</a></div>";
+                "<a href='" + this.html_url + "' type='button' class='btn btn-success btn-xs text-nowrap'>More Details</a></div>";
 
             $.each(this.labels, function () {
               $('.' + this.name + '-table .list-group').append(row);
@@ -43,7 +43,7 @@ $(document).ready(function () {
                 gsoc_hint +
                 "<a href='" +
                 this.html_url +
-                "' type='button' class='btn btn-success btn-lg'>Let's do it</a>" +
+                "' type='button' class='btn btn-success btn-lg'>More Details</a>" +
                 "</div></div></div>";
             $('footer').after(modal);
             $('.project-placeholder').html("Sorry but currently we don't have any mentoring project ...")
