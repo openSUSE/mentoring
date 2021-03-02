@@ -2,13 +2,13 @@
 {:.text-center}
 
 Are you looking for a way to learn how to study and improve
-software? Tired of spending your time developing software alone?
+software? Do you want to participate in the Google Summer of Code? Tired of spending your time developing software alone?
 Do you need an introduction to the wonderful world of Free Software?
 {:.lead}
 
 You have come to the right place! Scroll down and we will connect
 you with *real* people from our community who are willing
-to mentor you doing some *real* development projects.
+to mentor you doing some *real* development projects. Take a look on [More Details](https://101.opensuse.org/#projects) to get the full description of each project idea.
 Get started with Free Software, now!
 {:.lead}
 
