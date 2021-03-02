@@ -2,7 +2,7 @@
 {:.text-center}
 
 Are you looking for a way to learn how to study and improve
-software? Do you want to participate in the Google Summer of Code? Tired of spending your time developing software alone?
+software? Do you want to participate in the [Google Summer of Code](https://summerofcode.withgoogle.com/)? Tired of spending your time developing software alone?
 Do you need an introduction to the wonderful world of Free Software?
 {:.lead}
 
