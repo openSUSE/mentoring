@@ -2,7 +2,7 @@
 img: ibus.png
 title: ibus
 type: project
-technologies: [c, c++, python]
+technologies: [c, c++, python, JS]
 website: https://github.com/ibus/ibus
 github: https://github.com/ibus/ibus
 ---
