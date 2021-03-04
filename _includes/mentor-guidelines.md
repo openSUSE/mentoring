@@ -6,7 +6,7 @@ Here is our ten step program for mentoring!
 ### 1. Mentees First
 
   We believe in putting the mentees needs first. You need to emphasize
-  with the mentee, understand his personality, requirements and
+  with the mentee, understand their personality, requirements and
   circumstances. Make an effort to understand where the mentee comes from
   and what you need to do, to get them to contribute to free software.
   Mentoring is about them, not about your or openSUSEs needs.

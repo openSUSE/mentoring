@@ -26,5 +26,5 @@ To get started, you can use this template to structure your proposal, but don't 
 
  (Thanks to Teo Mrnjavac for the awesome [blog article](http://teom.org/blog/kde/how-to-write-a-kick-ass-proposal-for-google-summer-of-code/))
 
-There are plenty of blog articles out there how to write a good GSoC proposal.
-Contact your mentor early and to get to know his expectations. Just copy and paste the description from the mentoring project issue won't work!
+There are plenty of blog articles out there on how to write a good GSoC proposal.
+Contact your mentor early and to get to know them and their expectations. Just copying and pasting the description from the mentoring project issue won't work!
