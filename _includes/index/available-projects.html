@@ -6,9 +6,9 @@
         <section class="py-4{% if thecycle == 'odd' %} bg-light{% endif %} border-bottom">
             <div class="container">
                 <div class="row {% if thecycle == 'odd' %}flex-row-reverse{% endif %}">
-                    <div class="col-lg-7 col-sm-6">
+                    <div class="col-lg-7 col-sm-6" id="{{ post.title }}">
                         <h2>
-                        <span class="section-heading">{{ post.title }}</span>
+                        <a href="/#{{ post.title }} "><span class="section-heading">{{ post.title }}</span></a>
                         <span>
                             <a href="{{ post.website }}">{% include icons/rss.svg %}</a>
                             <a href="{{ post.github }}">{% include icons/github.svg %}</a>
