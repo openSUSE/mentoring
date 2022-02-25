@@ -8,7 +8,7 @@ Do you need an introduction to the wonderful world of Free Software?
 
 You have come to the right place! Scroll down and we will connect
 you with *real* people from our community who are willing
-to mentor you doing some *real* development projects. Take a look on [More Details](https://101.opensuse.org/#projects) to get the full description of each project idea.
+to mentor you doing some *real* development projects. Take a look on [More Details](https://101.opensuse.org/#projects) to get the full description of each project idea. After clicking on the project, you will see how much time the project will require based on the labels located with the details of the project.
 Get started with Free Software, now!
 {:.lead}
 
