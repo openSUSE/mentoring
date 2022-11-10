@@ -12,6 +12,7 @@ copyright: 'Copyright &copy; 2015-2020 openSUSE. All Rights Reserved.'
 github_organization: openSUSE
 github_repository: mentoring
 github_url: "https://github.com/openSUSE/mentoring"
+piwik_site_id: 34
 plugins:
   - jekyll-redirect-from
 # ----------------------- #
