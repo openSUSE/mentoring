@@ -10,4 +10,6 @@
 
 **Skill Level:** Easy, Medium, Hard
 
+**Prject Size:** Medium Sized Project (175 hours), Large Sized Project (350 hours)
+
 **Get started:** Tasks that mentors may want to suggest students so that they can start contributing to the code base (e.g. junior jobs, low hanging fruits, discussion on the mailing list)
