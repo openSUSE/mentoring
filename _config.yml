@@ -5,10 +5,10 @@
 title: openSUSE 101
 title_short: 101
 subTitle: Get started with Free Software now!
-email: cbruckmayer@suse.com
-author: Christian Bruckmayer
-description: The openSUSE Mentoring project collects ideas for programs like Google Summer of Code, Rails Girls Summer of Code or Outreachy
-copyright: 'Copyright &copy; 2015-2020 openSUSE. All Rights Reserved.'
+email: ddemaio@opensuse.org
+author: Douglas DeMaio
+description: The openSUSE Mentoring project collects ideas for programs like Google Summer of Code.
+copyright: 'Copyright &copy; 2015-2023 openSUSE. All Rights Reserved.'
 github_organization: openSUSE
 github_repository: mentoring
 github_url: "https://github.com/openSUSE/mentoring"
