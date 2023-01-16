@@ -22,7 +22,7 @@ know/do to become a Free Software hacker!
   [mailing list](mailto: opensuse-project@opensuse.org)
   ("Hey I'm thinking about becoming a mentee in 101 and I'm not
   sure about XXX and have questions about YYY"), tweet us at
-  [@opensusementors](https://twitter.com/@opensusementors),
+  [@opensuse](https://twitter.com/@opensuse),
   chat with us on [IRC](irc://irc.opensuse.org/openSUSE-project) and if you're
   already sure about your project, introduce yourself to the mentor directly.
   And even if you're not sure that you want to do this at all, come talk
