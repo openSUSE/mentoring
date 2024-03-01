@@ -9,13 +9,13 @@ assign yourself
 <span>{% include icons/chat.svg %} When students get in touch with you
 in the issue, help them
 
-<span>{% include icons/file.svg %} Between *29th of March and 13th of April 2021*
+<span>{% include icons/file.svg %} Between *18th of March and 2nd of April 2024*
 students have to submit a
 [proposal](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/)
 for your project to the
 [GSoC program site](https://summerofcode.withgoogle.com/). Help them
 
-<span>{% include icons/google.svg %} On *17th of May 2021* Google will
+<span>{% include icons/google.svg %} On *1st of May 2024* Google will
 announce accepted student proposals
 
 <span>{% include icons/computer.svg %} If one of your students
