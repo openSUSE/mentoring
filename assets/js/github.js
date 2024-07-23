@@ -10,7 +10,7 @@ $(document).ready(function () {
     type: 'GET',
     success: function (data, status, xhr) {
       remaining = xhr.getResponseHeader("X-RateLimit-Remaining");
-      if(remaining > 0) {
+      if (remaining > 0) {
         $.getJSON(url, function (data) {
           $.each(data, function (index) {
 
@@ -20,8 +20,8 @@ $(document).ready(function () {
 
             // Add the rows to the tables
             var row = "<div class='list-group-item d-flex justify-content-between align-items-center'><span><a href='#eventModal" + index + "' data-toggle='modal'>" + this.title + "</a>" +
-                " with <a href='" + mentor_url + "'>" + mentor + "</a></span>" +
-                "<a href='" + this.html_url + "' type='button' class='btn btn-success btn-xs text-nowrap'>More Details</a></div>";
+              " with <a href='" + mentor_url + "'>" + mentor + "</a></span>" +
+              "<a href='" + this.html_url + "' type='button' class='btn btn-success btn-xs text-nowrap'>More Details</a></div>";
 
             $.each(this.labels, function () {
               $('.' + this.name + '-table .list-group').append(row);
@@ -32,32 +32,43 @@ $(document).ready(function () {
             gsoc_hint = get_gsoc_hint(this.labels);
 
             // Add the modal for the project
+            if (this.body) {
+              try {
+                var modalContent = markdown.toHTML(this.body);
+              } catch (error) {
+                console.error("Error converting markdown to HTML:", error);
+                var modalContent = "<p>Error loading content. Please try again later.</p>";
+              }
+            } else {
+              console.warn("Empty or null body for issue:", this);
+              var modalContent = "<p>No description provided for this project.</p>";
+            }
+
             var modal = "<div class='modal fade' id='eventModal" + index + "' tabindex='-1' role='dialog' aria-hidden='true'> <div class='modal-content'>" +
-                "<div class='modal-header'>" +
-                "<h4 class='mb-0'>" + this.title + "</h4>" +
-                "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" +
-                "<span aria-hidden='true'>&times;</span>" +
-                "</button></div>" +
-                "<div class='modal-body'>" +
-                markdown.toHTML(this.body) +
-                gsoc_hint +
-                "<a href='" +
-                this.html_url +
-                "' type='button' class='btn btn-success btn-lg'>More Details</a>" +
-                "</div></div></div>";
+              "<div class='modal-header'>" +
+              "<h4 class='mb-0'>" + this.title + "</h4>" +
+              "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" +
+              "<span aria-hidden='true'>&times;</span>" +
+              "</button></div>" +
+              "<div class='modal-body'>" +
+              modalContent +
+              gsoc_hint +
+              "<a href='" +
+              this.html_url +
+              "' type='button' class='btn btn-success btn-lg'>More Details</a>" +
+              "</div></div></div>";
             $('footer').after(modal);
-            $('.project-placeholder').html("Sorry but currently we don't have any mentoring project ...")
+            $('.project-placeholder').html("Sorry but currently we don't have any mentoring project ...");
           });
         });
-      }
-      else{
+      } else {
         $('.project-placeholder').html("Sorry but it seems like you exceeded the allowed number of requests. Please have a look at <a href='https://github.com/openSUSE/mentoring/issues'>our issues</a>!")
       }
     }
   });
 });
 
-$(document).on('click', '.close', function() {
+$(document).on('click', '.close', function () {
   $(this).parents('.show').removeAttr('style');
   $(this).parents('.show').toggleClass('show');
   $('body').toggleClass('modal-open');
@@ -66,15 +77,14 @@ $(document).on('click', '.close', function() {
   $('.modal-backdrop').remove();
 });
 
-function get_gsoc_hint(labels){
+function get_gsoc_hint(labels) {
   result = "";
   current_url = window.location.href;
-  for(var i = 0; i < labels.length; i++) {
+  for (var i = 0; i < labels.length; i++) {
     if (labels[i].name == 'GSoC') {
-      if(current_url.indexOf('gsoc') > -1) {
+      if (current_url.indexOf('gsoc') > -1) {
         url = current_url;
-      }
-      else{
+      } else {
         url = current_url + "/gsoc/";
       }
       result = "<p>You can do this project as part of the Google Summer of Code program. Click <a href='" + url + "'>here</a> for more information.</p>"
@@ -83,3 +93,4 @@ function get_gsoc_hint(labels){
   }
   return result;
 }
+
