@@ -61,7 +61,7 @@
    *  - markdown (String): markdown string to parse
    *  - dialect (String | Dialect): the dialect to use, defaults to gruber
    *
-   *  Parse `markdown` and return a markdown document as a Markdown.JsonML tree.
+   *  Parse markdown and return a markdown document as a Markdown.JsonML tree.
    **/
   expose.parse = function( source, dialect ) {
     // dialect will default if undefined
@@ -194,7 +194,7 @@
    *  - block (String): the block to process
    *  - next (Array): the following blocks
    *
-   * Process `block` and return an array of JsonML nodes representing `block`.
+   * Process block and return an array of JsonML nodes representing block.
    *
    * It does this by asking each block level function in the dialect to process
    * the block until one can. Succesful handling is indicated by returning an
@@ -204,10 +204,10 @@
    * themselves as appropriate.
    *
    * If the blocks were split incorrectly or adjacent blocks need collapsing you
-   * can adjust `next` in place using shift/splice etc.
+   * can adjust next in place using shift/splice etc.
    *
    * If any of this default behaviour is not right for the dialect, you can
-   * define a `__call__` method on the dialect that will get invoked to handle
+   * define a __call__ method on the dialect that will get invoked to handle
    * the block processing.
    */
   Markdown.prototype.processBlock = function processBlock( block, next ) {
@@ -242,9 +242,9 @@
    *  Markdown#toTree( source ) -> JsonML
    *  - source (String): markdown source to parse
    *
-   *  Parse `source` into a JsonML tree representing the markdown document.
+   *  Parse source into a JsonML tree representing the markdown document.
    **/
-// custom_tree means set this.tree to `custom_tree` and restore old value on return
+// custom_tree means set this.tree to custom_tree and restore old value on return
   Markdown.prototype.toTree = function toTree( source, custom_root ) {
     var blocks = source instanceof Array ? source : this.split_blocks( source );
 
@@ -444,7 +444,7 @@
           return input.replace( / {0,3}\t/g, "    " );
         }
 
-        // Add inline content `inline` to `li`. inline comes from processInline
+        // Add inline content inline to li. inline comes from processInline
         // so is an array of content
         function add(li, loose, inline, nl) {
           if ( loose ) {
@@ -825,11 +825,11 @@
     "]": function () {},
     "}": function () {},
 
-    __escape__ : /^\\[\\`\*_{}\[\]()#\+.!\-]/,
+    __escape__ : /^\\[\\\*_{}\[\]()#\+.!\-]/,
 
     "\\": function escaped( text ) {
       // [ length of input processed, node/children to add... ]
-      // Only esacape: \ ` * _ { } [ ] ( ) # * + - . !
+      // Only esacape: \  * _ { } [ ] ( ) # * + - . !
       if ( this.dialect.inline.__escape__.exec( text ) )
         return [ 2, text.charAt( 1 ) ];
       else
@@ -875,7 +875,7 @@
     "[": function link( text ) {
 
       var orig = String(text);
-      // Inline content is possible inside `link text`
+      // Inline content is possible inside link text
       var res = Markdown.DialectHelpers.inline_until_char.call( this, text.substr(1), "]" );
 
       // No closing ']' found. Just consume the [
@@ -984,16 +984,16 @@
       return [ 1, "<" ];
     },
 
-    "`": function inlineCode( text ) {
+    "": function inlineCode( text ) {
       // Inline code block. as many backticks as you like to start it
       // Always skip over the opening ticks.
-      var m = text.match( /(`+)(([\s\S]*?)\1)/ );
+      var m = text.match( /(+)(([\s\S]*?)\1)/ );
 
       if ( m && m[2] )
         return [ m[1].length + m[2].length, [ "inlinecode", m[3] ] ];
       else {
         // TODO: No matching end code found - warn!
-        return [ 1, "`" ];
+        return [ 1, "" ];
       }
     },
 
@@ -1212,7 +1212,7 @@
     // we're only interested in the first block
     if ( block.lineNumber > 1 ) return undefined;
 
-    // document_meta blocks consist of one or more lines of `Key: Value\n`
+    // document_meta blocks consist of one or more lines of Key: Value\n
     if ( ! block.match( /^(?:\w+:.*\n)*\w+:.*$/ ) ) return undefined;
 
     // make an attribute node if it doesn't exist
@@ -1293,7 +1293,7 @@
 
     // see if we're dealing with a tight or loose block
     if ( ( m = block.match( tight ) ) ) {
-      // pull subsequent tight DL blocks out of `next`
+      // pull subsequent tight DL blocks out of next
       var blocks = [ block ];
       while ( next.length && tight.exec( next[ 0 ] ) ) {
         blocks.push( next.shift() );
@@ -1426,7 +1426,7 @@
     return [ m[ 0 ].length, "" ];
   };
 
-  Markdown.dialects.Maruku.inline.__escape__ = /^\\[\\`\*_{}\[\]()#\+.!\-|:]/;
+  Markdown.dialects.Maruku.inline.__escape__ = /^\\[\\\*_{}\[\]()#\+.!\-|:]/;
 
   Markdown.buildBlockOrder ( Markdown.dialects.Maruku.block );
   Markdown.buildInlinePatterns( Markdown.dialects.Maruku.inline );
@@ -1481,7 +1481,7 @@
    *  The options currently understood are:
    *
    *  - root (Boolean): wether or not the root node should be included in the
-   *    output, or just its children. The default `false` is to not include the
+   *    output, or just its children. The default false is to not include the
    *    root itself.
    */
   expose.renderJsonML = function( jsonml, options ) {
