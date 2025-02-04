@@ -1548,7 +1548,12 @@
     }
   }
 
-  function convert_tree_to_html( tree, references, options ) {
+    function convert_tree_to_html(tree, references, options) {
+    if (!tree) {
+        console.error("Error: tree is null. Skipping conversion.");
+        return ""; // or return an empty array if needed
+    }
+ {
     var i;
     options = options || {};
 
