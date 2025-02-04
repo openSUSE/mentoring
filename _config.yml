@@ -8,7 +8,11 @@ subTitle: Get started with Free Software now!
 email: ddemaio@opensuse.org
 author: Douglas DeMaio
 description: The openSUSE Mentoring project collects ideas for programs like Google Summer of Code.
+<<<<<<< HEAD
 copyright: 'Copyright &copy; 2015-2025 openSUSE. All Rights Reserved.'
+=======
+copyright: 'Copyright &copy; 2015-2025 openSUSE. All Rights Reserved.'
+>>>>>>> 44aee0727cbc7d15fd96158846c1742ecefa0f74
 github_organization: openSUSE
 github_repository: mentoring
 github_url: "https://github.com/openSUSE/mentoring"
