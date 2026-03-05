@@ -1,64 +1,51 @@
-### You want to know what it means to be mentored by us?
-Wonderful! Here are the five things that are important for you to
-know/do to become a Free Software hacker!
+### What It Means to Be Mentored by Us
 
-### 1. Understand the goal
+Here are five things to know about becoming a Free Software contributor through openSUSE:
 
-  The goal of all of this is to guide you on becoming a regular contributor
-  to Free Software. It's as much about building relationships, learning
-  how we communicate and collaborate as it is about hacking code
-  and using tools. This is about you becoming a full-fledged contributor
-  to openSUSE!
+### 1. Understand the Goal
 
-  That also means that the goal of this program is not to teach you the
-  basics of software development. Those skills can best be required
-  [elsewhere](https://en.wikipedia.org/wiki/Category:Open_educational_resources)
-  and we expect you to have them.
+  The goal is to guide you toward becoming a regular contributor
+  to Free Software. It is as much about building relationships, learning
+  how we communicate and collaborate, as it is about writing code
+  and using tools. This is about you becoming a full member of the
+  openSUSE community.
 
-### 2. Help us to get to know you
+  That also means this program does not teach the basics of software
+  development. We expect you to have foundational skills already — the program
+  builds on top of them.
 
-  We are here for you to talk about every
-  aspect of this process. Introduce yourself on our
-  [mailing list](mailto: opensuse-project@opensuse.org)
-  ("Hey I'm thinking about becoming a mentee in 101 and I'm not
-  sure about XXX and have questions about YYY"), tweet us at
-  [@opensuse](https://twitter.com/@opensuse),
-  chat with us on [IRC](irc://irc.opensuse.org/openSUSE-project) and if you're
-  already sure about your project, introduce yourself to the mentor directly.
-  And even if you're not sure that you want to do this at all, come talk
-  to us and we will find out together if this is for you or not.
+### 2. Introduce Yourself
 
-### 3. Be courageous and committed
+  Reach out and say hello. Send an email to our
+  [mailing list](mailto:opensuse-project@opensuse.org),
+  find us on [Matrix](https://matrix.to/#/#project:opensuse.org),
+  or comment directly on a project issue on GitHub.
+  Even if you are not sure this is for you yet, we are happy to help
+  you figure it out.
 
-  Find a project that challenges and that exites you. But think about your
-  choice carefully, you're going to be doing it for a while. And while
-  you are at it we expect you to be self-motivated and proactive. This
-  will work out best if you choose the right thing to do, if you build a
-  relationship with your mentor, set realistic goals and if you're willing
-  to respond to change.
+### 3. Be Courageous and Committed
+
+  Find a project that challenges and excites you. Think about your
+  choice carefully — you will be working on it for a while. Be
+  self-motivated and proactive. Set realistic goals, build a
+  relationship with your mentor, and be willing to adapt when things change.
 
 ### 4. Communicate
 
-  In our community people with different levels of expertise,
-  speaking different languages and having different cultural backgrounds
-  openly share their ideas. That's why communication is king. We expect
-  you to communicate daily with your mentor, to write short reports at least
-  once a week and we expect that you tell us if there is something you
-  can't do. Share what you are up to, share your challenges and share
-  what you have learned. Open, honest and prompt communication is the key
-  to success!
+  Our community includes people with different expertise levels,
+  languages, and cultural backgrounds. Open communication makes it
+  work. We expect you to communicate regularly with your mentor,
+  share progress updates, and let us know if you hit a blocker.
+  Honest and timely communication is the key to success.
 
 ### 5. Collaborate
 
-  Make your code readable and understandable by everyone else in the project.
-  Document code that isn't obvious. Commit your code early, commit often.
-  Get your code reviewed and review code of others as often as you can.
-  Make sure everyone can use, share, study, modify, and share
-  modified versions of what you produce.
+  Write readable code and document what is not obvious.
+  Commit early and often. Get your code reviewed and review others'
+  code when you can. Make sure everything you produce can be used,
+  shared, studied, and modified by others.
 
-  Accept that there are different ways to work and different goals for
-  people. Respect people and their contributions, respect other opinions
-  and beliefs. Listen to arguments and address problems in a constructive
-  and open way. A diverse community based on mutual respect is the base
-  for a creative and productive environment.
-
+  Respect different perspectives and working styles.
+  Listen, address problems constructively, and contribute to a
+  welcoming environment. A diverse community built on mutual respect
+  is the foundation for great software.
