@@ -8,13 +8,13 @@ the official [Google Summer of Code](https://developers.google.com/open-source/g
 
 <span>{% include icons/chat.svg %} Ask questions on our
 [mailing list](mailto:opensuse-project@opensuse.org), find us on
-[Matrix](https://matrix.to/#/#project:opensuse.org),
+[Matrix](https://chat.opensuse.org),
 or comment directly on the GitHub issue to connect with the mentor.
 
 <span>{% include icons/pencil.svg %} Once you have found a project and mentor,
 write a [project proposal](http://write.flossmanuals.net/gsocstudentguide/writing-a-proposal/).
 
-<span>{% include icons/send.svg %} Between **March 16 and March 31, 2026**,
+<span>{% include icons/send.svg %} Between **the proposal period**,
 submit your project proposal on the
 [GSoC program site](https://summerofcode.withgoogle.com/).
 

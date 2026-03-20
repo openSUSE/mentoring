@@ -10,9 +10,8 @@ Scroll down to explore **real projects** maintained by experienced community mem
 Project sizes are labeled so you can find one that fits your availability:
 {:.lead}
 
-- 🟢 **Small** — a focused task, great for getting started
-- 🟡 **Medium** — a solid project with room to learn
-- 🔴 **Large** — a deeper challenge, ideal for GSoC
+- **Medium** — Medium sized project is 175 hours
+- **Large** — Large sized project is 350 hours
 {:.lead}
 
 Click **More Details** on any project to see the full description and connect with its mentor through GitHub.
