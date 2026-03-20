@@ -1,11 +1,11 @@
-## Flip bits, not burgers!
+## Flip Bits, Not Burgers!
 {:.text-center}
 
-Google Summer of Code is a global program that offers students a
+Google Summer of Code is a global program that offers contributors a
 stipend to write code for free software projects. **openSUSE**
-has participated in several Google Summer of Code since 2006 and has
-helped around 100 students to get started with free software!
+has participated in Google Summer of Code since 2006, helping
+more than 100 contributors get started with free software!
 {:.lead}
 
-This year openSUSE once again applied to be a mentoring organisation. A list of project ideas can be found on https://101.opensuse.org/#projects
+In 2026, openSUSE is once again participating as a mentoring organization. Browse our project ideas below at [101.opensuse.org/#projects](https://101.opensuse.org/#projects) and connect with a mentor to get started.
 {:.lead}

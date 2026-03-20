@@ -1,63 +1,168 @@
 $(document).ready(function () {
-  var url = $('#github-list').first().data('url');
+  var $list = $('#github-list').first();
+  var baseUrl = $list.data('url');
 
-  // GitHub allows only 60 API calls per hour from the same IP address,
-  // therefore we check first if we have API calls left.
-  // If not we display a proper error message!
-  var remaining;
-  $.ajax({
-    url: 'https://api.github.com',
-    type: 'GET',
-    success: function (data, status, xhr) {
-      remaining = xhr.getResponseHeader("X-RateLimit-Remaining");
-      if(remaining > 0) {
-        $.getJSON(url, function (data) {
-          $.each(data, function (index) {
+  if (!baseUrl) return;
 
-            // Assignee can be nil
-            var mentor = this.assignee ? this.assignee.login : this.user.login;
-            var mentor_url = this.assignee ? this.assignee.html_url : this.user.html_url;
+  // Fetch all open issues with pagination (GitHub returns 30 per page by default)
+  var allIssues = [];
+  var page = 1;
+  var perPage = 100;
 
-            // Add the rows to the tables
-            var row = "<div class='list-group-item d-flex justify-content-between align-items-center'><span><a href='#eventModal" + index + "' data-toggle='modal'>" + this.title + "</a>" +
-                " with <a href='" + mentor_url + "'>" + mentor + "</a></span>" +
-                "<a href='" + this.html_url + "' type='button' class='btn btn-success btn-xs text-nowrap'>More Details</a></div>";
+  function fetchIssues() {
+    var url = baseUrl + '?state=open&per_page=' + perPage + '&page=' + page;
+    $.ajax({
+      url: url,
+      type: 'GET',
+      dataType: 'json',
+      success: function (data, status, xhr) {
+        var remaining = xhr.getResponseHeader('X-RateLimit-Remaining');
 
-            $.each(this.labels, function () {
-              $('.' + this.name + '-table .list-group').append(row);
-              $('.' + this.name + '-table').show();
-              $('.' + this.name + '-placeholder').remove();
-            });
+        if (remaining !== null && parseInt(remaining, 10) <= 0) {
+          $('.project-placeholder').html(
+            '<div class="alert alert-warning">' +
+            'GitHub API rate limit reached. Please view our projects directly on ' +
+            '<a href="https://github.com/openSUSE/mentoring/issues">GitHub Issues</a>.' +
+            '</div>'
+          );
+          return;
+        }
 
-            gsoc_hint = get_gsoc_hint(this.labels);
-
-            // Add the modal for the project
-            var modal = "<div class='modal fade' id='eventModal" + index + "' tabindex='-1' role='dialog' aria-hidden='true'> <div class='modal-content'>" +
-                "<div class='modal-header'>" +
-                "<h4 class='mb-0'>" + this.title + "</h4>" +
-                "<button type='button' class='close' data-dismiss='modal' aria-label='Close'>" +
-                "<span aria-hidden='true'>&times;</span>" +
-                "</button></div>" +
-                "<div class='modal-body'>" +
-                markdown.toHTML(this.body) +
-                gsoc_hint +
-                "<a href='" +
-                this.html_url +
-                "' type='button' class='btn btn-success btn-lg'>More Details</a>" +
-                "</div></div></div>";
-            $('footer').after(modal);
-            $('.project-placeholder').html("Sorry but currently we don't have any mentoring project ...")
-          });
-        });
+        if (data && data.length > 0) {
+          allIssues = allIssues.concat(data);
+          if (data.length === perPage) {
+            page++;
+            fetchIssues();
+          } else {
+            renderIssues(allIssues);
+          }
+        } else {
+          renderIssues(allIssues);
+        }
+      },
+      error: function () {
+        $('.project-placeholder').html(
+          '<div class="alert alert-warning">' +
+          'Could not load projects. Please visit ' +
+          '<a href="https://github.com/openSUSE/mentoring/issues">GitHub Issues</a> directly.' +
+          '</div>'
+        );
       }
-      else{
-        $('.project-placeholder').html("Sorry but it seems like you exceeded the allowed number of requests. Please have a look at <a href='https://github.com/openSUSE/mentoring/issues'>our issues</a>!")
+    });
+  }
+
+  function renderMarkdown(text) {
+    if (!text) return '<p><em>No description provided.</em></p>';
+    try {
+      if (typeof marked !== 'undefined') {
+        // marked v15+ exports marked.marked or just marked
+        var parser = (typeof marked.parse === 'function') ? marked : marked.marked;
+        return parser.parse(text);
+      }
+      // Fallback: escape and wrap in <pre>
+      return '<pre>' + $('<span>').text(text).html() + '</pre>';
+    } catch (e) {
+      return '<pre>' + $('<span>').text(text).html() + '</pre>';
+    }
+  }
+
+  function getSizeLabel(labels) {
+    for (var i = 0; i < labels.length; i++) {
+      var name = labels[i].name.toLowerCase();
+      if (name.indexOf('small') > -1) return { text: 'Small', class: 'badge-success' };
+      if (name.indexOf('medium') > -1) return { text: 'Medium', class: 'badge-warning' };
+      if (name.indexOf('large') > -1) return { text: 'Large', class: 'badge-danger' };
+    }
+    return null;
+  }
+
+  function renderIssues(issues) {
+    var matched = false;
+    $.each(issues, function (index, issue) {
+      // Skip pull requests
+      if (issue.pull_request) return;
+
+      var mentor = issue.assignee ? issue.assignee.login : issue.user.login;
+      var mentorUrl = issue.assignee ? issue.assignee.html_url : issue.user.html_url;
+      var sizeLabel = getSizeLabel(issue.labels);
+      var sizeBadge = sizeLabel
+        ? ' <span class="badge ' + sizeLabel.class + '">' + sizeLabel.text + '</span>'
+        : '';
+
+      var row =
+        '<div class="list-group-item d-flex justify-content-between align-items-center flex-wrap">' +
+          '<span class="mr-2">' +
+            '<a href="#issueModal' + issue.number + '" data-toggle="modal">' +
+              issue.title +
+            '</a>' +
+            sizeBadge +
+            ' <small class="text-muted">with <a href="' + mentorUrl + '">@' + mentor + '</a></small>' +
+          '</span>' +
+          '<a href="' + issue.html_url + '" class="btn btn-success btn-sm text-nowrap mt-1">' +
+            'More Details' +
+          '</a>' +
+        '</div>';
+
+      var gsocHint = getGsocHint(issue.labels);
+      var body = renderMarkdown(issue.body);
+
+      var modal =
+        '<div class="modal fade" id="issueModal' + issue.number + '" tabindex="-1" role="dialog" aria-hidden="true">' +
+          '<div class="modal-dialog modal-lg" role="document">' +
+            '<div class="modal-content">' +
+              '<div class="modal-header">' +
+                '<h4 class="mb-0">' + issue.title + '</h4>' +
+                '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                  '<span aria-hidden="true">&times;</span>' +
+                '</button>' +
+              '</div>' +
+              '<div class="modal-body">' +
+                body +
+                gsocHint +
+                '<a href="' + issue.html_url + '" class="btn btn-success btn-lg mt-3">View on GitHub</a>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+
+      $.each(issue.labels, function () {
+        var $table = $('.' + this.name + '-table');
+        if ($table.length) {
+          $table.find('.list-group').append(row);
+          $table.show();
+          $('.' + this.name + '-placeholder').remove();
+          matched = true;
+        }
+      });
+
+      $('body').append(modal);
+    });
+
+    // Update any remaining placeholders
+    if (!matched) {
+      $('.project-placeholder').html(
+        "Currently there are no mentoring projects listed. Check back soon or " +
+        "<a href='https://github.com/openSUSE/mentoring/issues'>browse our GitHub issues</a>."
+      );
+    }
+  }
+
+  function getGsocHint(labels) {
+    var currentUrl = window.location.href;
+    for (var i = 0; i < labels.length; i++) {
+      if (labels[i].name === 'GSoC') {
+        var url = (currentUrl.indexOf('gsoc') > -1) ? currentUrl : currentUrl + '/gsoc/';
+        return '<p class="mt-3"><span class="badge badge-info">GSoC</span> This project is eligible for ' +
+          '<a href="' + url + '">Google Summer of Code</a>.</p>';
       }
     }
-  });
+    return '';
+  }
+
+  fetchIssues();
 });
 
-$(document).on('click', '.close', function() {
+$(document).on('click', '.close', function () {
   $(this).parents('.show').removeAttr('style');
   $(this).parents('.show').toggleClass('show');
   $('body').toggleClass('modal-open');
@@ -65,21 +170,3 @@ $(document).on('click', '.close', function() {
   $('nav').removeAttr('style');
   $('.modal-backdrop').remove();
 });
-
-function get_gsoc_hint(labels){
-  result = "";
-  current_url = window.location.href;
-  for(var i = 0; i < labels.length; i++) {
-    if (labels[i].name == 'GSoC') {
-      if(current_url.indexOf('gsoc') > -1) {
-        url = current_url;
-      }
-      else{
-        url = current_url + "/gsoc/";
-      }
-      result = "<p>You can do this project as part of the Google Summer of Code program. Click <a href='" + url + "'>here</a> for more information.</p>"
-      break;
-    }
-  }
-  return result;
-}
