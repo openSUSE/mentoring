@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
-
 gem 'jekyll'
-gem "minima"
 gem 'jekyll-redirect-from'
 gem 'jekyll-theme-opensuse', :git => 'https://github.com/opensuse/jekyll-theme.git'
 gem 'kramdown-parser-gfm'
-gem "csv"
-gem "bigdecimal"
+gem 'csv'
+gem 'jemoji', '~> 0.12'
+gem 'webrick'

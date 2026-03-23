@@ -22,7 +22,7 @@ plugins:
 # Build settings
 markdown: kramdown
 permalink: pretty
-theme: minima
+theme: jekyll-theme-opensuse
 
 jquery_full: true
 
