@@ -29,7 +29,8 @@ $(document).ready(function () {
               $('.' + this.name + '-placeholder').remove();
             });
 
-            gsoc_hint = get_gsoc_hint(this.labels);
+            var gsoc_hint = get_gsoc_hint(this.labels);
+            var body_content = (this.body && typeof this.body === 'string') ? markdown.toHTML(this.body) : '<p>No description provided.</p>';
 
             // Add the modal for the project
             var modal = "<div class='modal fade' id='eventModal" + index + "' tabindex='-1' role='dialog' aria-hidden='true'> <div class='modal-content'>" +
@@ -39,7 +40,7 @@ $(document).ready(function () {
                 "<span aria-hidden='true'>&times;</span>" +
                 "</button></div>" +
                 "<div class='modal-body'>" +
-                markdown.toHTML(this.body) +
+                body_content +
                 gsoc_hint +
                 "<a href='" +
                 this.html_url +
@@ -48,11 +49,16 @@ $(document).ready(function () {
             $('footer').after(modal);
             $('.project-placeholder').html("Sorry but currently we don't have any mentoring project ...")
           });
+        }).fail(function () {
+          $('.project-placeholder').html("Could not load projects. Please have a look at <a href='https://github.com/openSUSE/mentoring/issues'>our GitHub issues</a>!");
         });
       }
       else{
         $('.project-placeholder').html("Sorry but it seems like you exceeded the allowed number of requests. Please have a look at <a href='https://github.com/openSUSE/mentoring/issues'>our issues</a>!")
       }
+    },
+    error: function () {
+      $('.project-placeholder').html("Could not load projects at this time. Please check <a href='https://github.com/openSUSE/mentoring/issues'>our project issues directly on GitHub</a>!");
     }
   });
 });
